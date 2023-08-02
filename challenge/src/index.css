@@ -24,14 +24,34 @@ p {
   background-color: hsl(231, 69%, 60%);
 }
 
-.bg {
+.darkest-blue {
+  background-color: hsl(229, 31%, 21%);
+}
+
+.button-red{
+  background-color: hsl(0, 94%, 66%);
+}
+
+.rectangle-right {
   position: absolute;
-  right: -40;
+  right: -32px;
   bottom: 0;
-  height: 300px;
-  width: 120%;
+  height: 250px;
+  width: 100%;
   background-color: hsl(231, 69%, 60%);
   border-radius: 200px 0 0 200px;
+  z-index: -1;
+
+}
+
+.rectangle-left {
+  position: absolute;
+  left: -32px;
+  bottom: -50px;
+  height: 250px;
+  width: 100%;
+  background-color: hsl(231, 69%, 60%);
+  border-radius: 0 200px 200px 0;
   z-index: -1;
 
 }
@@ -46,4 +66,18 @@ p {
   body {
     overflow-x: hidden;
   };
+
+  .rectangle-left, .rectangle-right{
+    height: 300px;
+  }
+
+  .rectangle-right{
+    right: -40%;
+    width: 120%;
+  }
+
+  .rectangle-left{
+    left: -40%;
+    width: 120%;
+  }
 }

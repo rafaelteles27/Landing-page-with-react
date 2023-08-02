@@ -18,7 +18,7 @@ export default function Hero() {
       <article className='relative'>
         <img src={hero} alt='' className='w-full' />
 
-        <div className='bg'></div>
+        <div className='rectangle-right'></div>
       </article>
     </section>
   )
