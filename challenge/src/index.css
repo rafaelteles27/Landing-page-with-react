@@ -10,8 +10,40 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1,h2,h3,h4 {
+  color: hsl(229, 31%, 21%);
+  font-weight: bold;
+}
+
+p {
+  color: hsl(229, 8%, 60%);
+  
+}
+
+.button-darkBlue {
+  background-color: hsl(231, 69%, 60%);
+}
+
+.bg {
+  position: absolute;
+  right: -40;
+  bottom: 0;
+  height: 300px;
+  width: 120%;
+  background-color: hsl(231, 69%, 60%);
+  border-radius: 200px 0 0 200px;
+  z-index: -1;
+
+}
+
+
 @media (min-width: 1024px) {
   * {
     font-size: 18px;
+    
   }
+
+  body {
+    overflow-x: hidden;
+  };
 }
