@@ -10,6 +10,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+nav {
+  @apply flex justify-between flex-col opacity-0 absolute -z-50
+  lg:opacity-100 lg:relative lg:z-auto;
+  
+}
+
+nav.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: hsl(229, 31%, 21%, 0.9);
+  z-index: 999;
+  padding: 32px;
+  opacity: 1;
+}
+
+nav ul li button {
+  color: aliceblue;
+  font-size: 16px;
+}
+
 h1,h2,h3,h4 {
   color: hsl(229, 31%, 21%);
   font-weight: bold;
@@ -66,6 +89,13 @@ p {
   body {
     overflow-x: hidden;
   };
+
+  nav.open {
+    background-color: transparent;
+    position: relative;
+    z-index: auto;
+    padding: 0;
+  }
 
   .rectangle-left, .rectangle-right{
     height: 300px;
