@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import facebook from "../images/icon-facebook.svg";
+import facebookRed from "../images/icon-facebook-red.svg";
 import twitter from "../images/icon-twitter.svg";
+import twitterRed from "../images/icon-twitter-red.svg";
 import logo from "../images/logo-bookmark-white.svg";
 
 export default function Footer() {
+  const [isFacebookHovering, setIsFacebookHovering] = useState(false);
+  const [isTwitterHovering, setIsTwitterHovering] = useState(false);
+
   return (
     <>
     <footer className='darkest-blue py-10 px-8 '>
@@ -29,10 +34,26 @@ export default function Footer() {
             </ul>
           </div>
 
-        <ul className='flex items-center gap-4 lg:gap-10'>
-            <li><button><img src={facebook} alt='' /></button></li>
-            <li><button><img src={twitter} alt='' /></button></li>
-        </ul>
+          <ul className='flex items-center gap-4 lg:gap-10'>
+      <li className="relative">
+        <button
+          onMouseEnter={() => setIsFacebookHovering(true)}
+          onMouseLeave={() => setIsFacebookHovering(false)}
+        >
+          <img src={facebook} alt='' className={`w-5 h-5 transform duration-500 hover:${isFacebookHovering ? 'opacity-0' : 'opacity-100'}`} />
+          <img src={facebookRed} alt='' className={`w-5 h-5 absolute top-0 left-0 opacity-0 transition-opacity duration-500 ${isFacebookHovering ? 'opacity-100' : 'opacity-0'}`} />
+        </button>
+      </li>
+      <li className="relative">
+        <button
+          onMouseEnter={() => setIsTwitterHovering(true)}
+          onMouseLeave={() => setIsTwitterHovering(false)}
+        >
+          <img src={twitter} alt='' className={`w-5 h-5 transform duration-500 hover:${isTwitterHovering ? 'opacity-0' : 'opacity-100'}`} />
+          <img src={twitterRed} alt='' className={`w-5 h-5 absolute top-0 left-0 opacity-0 transition-opacity duration-500 ${isTwitterHovering ? 'opacity-100' : 'opacity-0'}`} />
+        </button>
+      </li>
+    </ul>
        </div>
     </footer>
     </>
