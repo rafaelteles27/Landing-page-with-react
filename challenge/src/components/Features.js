@@ -47,7 +47,7 @@ export default function Features() {
         {features.map((search, index) => (
           <li key={search.id} className='border-t border-slate-400 last:border-b md:border-t-0 md:border-b'>
             <button onClick={() => setValue(index) }
-             className={`py-3 md:px-8 ${index === value && "border-b-2 border-soft-red"}`}>{search.button}</button>
+             className={`hover:text-soft-red py-3 md:px-8 ${index === value && " border-b-2 border-soft-red"}`}>{search.button}</button>
           </li>
         ))}
        </ul>
